@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'api_keys.dart';
 
 class WeatherDetailsPage extends StatefulWidget {
   final String cityName;
 
-  const WeatherDetailsPage({Key? key, required this.cityName}) : super(key: key);
+  const WeatherDetailsPage({super.key, required this.cityName});
 
   @override
   State<WeatherDetailsPage> createState() => _WeatherDetailsPageState();
@@ -24,9 +25,9 @@ class _WeatherDetailsPageState extends State<WeatherDetailsPage> {
   }
 
   Future<void> fetchWeather() async {
-    final apiKey = 'd617c73136d618d6c246a04d37b6e9bb'; // Replace with your OpenWeatherMap API key
+    final apiKeyInUse = apiKey; // Replace with your OpenWeatherMap API key
     final url =
-        'https://api.openweathermap.org/data/2.5/weather?q=${widget.cityName}&appid=$apiKey&units=metric';
+        'https://api.openweathermap.org/data/2.5/weather?q=${widget.cityName}&appid=$apiKeyInUse&units=metric';
 
     try {
       final response = await http.get(Uri.parse(url));

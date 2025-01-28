@@ -3,7 +3,7 @@ import 'weather_details_page.dart';
 import 'package:weather_icons/weather_icons.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -53,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   SizedBox(height: 40),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     child: TextField(
                       controller: cityController,
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ),
                   SizedBox(height: 25),
-                  Container(
+                  SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -88,9 +88,9 @@ class _HomeScreenState extends State<HomeScreen> {
                         elevation: 0,
                       ).copyWith(
                         backgroundColor:
-                            MaterialStateProperty.resolveWith<Color>(
-                          (Set<MaterialState> states) {
-                            if (states.contains(MaterialState.pressed)) {
+                            WidgetStateProperty.resolveWith<Color>(
+                          (Set<WidgetState> states) {
+                            if (states.contains(WidgetState.pressed)) {
                               return Colors.white.withOpacity(0.2);
                             }
                             return Colors.white;
