@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.lightBlue,  // Changed to a more modern background color
+      backgroundColor: Colors.lightBlue, 
       body: Center(
         child: AnimatedOpacity(
           opacity: 1.0,
@@ -41,14 +41,14 @@ class _SplashScreenState extends State<SplashScreen> {
                   color: Colors.white,
                   fontSize: 32,
                   fontWeight: FontWeight.w700,
-                  letterSpacing: 2.0,  // Modern touch for spacing
+                  letterSpacing: 2.0, 
                 ),
               ),
               SizedBox(height: 20),
               Image.asset(
                 'images/splash.png', 
-                height: 250,  // Set a fixed height to keep the image in proportion
-                width: 250,   // Ensures the image is responsive and looks neat
+                height: 250,  
+                width: 250,   
               ),
             ],
           ),
