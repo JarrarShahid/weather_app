@@ -57,7 +57,7 @@ class _WeatherDetailsPageState extends State<WeatherDetailsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Weather Details'),
-        backgroundColor: Colors.lightBlue, // Adjusted color to match the gradient
+        backgroundColor: Colors.lightBlue, 
       ),
       body: Container(
         height: double.infinity,
@@ -81,7 +81,7 @@ class _WeatherDetailsPageState extends State<WeatherDetailsPage> {
                   ),
                 )
               : temperature == null
-                  ? CircularProgressIndicator() // Keep a modern loading spinner
+                  ? CircularProgressIndicator()
                   : Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 16.0),
                       child: Column(
@@ -93,7 +93,7 @@ class _WeatherDetailsPageState extends State<WeatherDetailsPage> {
                             style: TextStyle(
                               fontSize: 26,
                               fontWeight: FontWeight.w700,
-                              color: Colors.black, // Stylish color
+                              color: Colors.black, 
                             ),
                           ),
                           SizedBox(height: 20),
